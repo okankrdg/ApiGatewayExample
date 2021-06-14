@@ -1,0 +1,28 @@
+{
+  "Routes" : [
+    {
+      "DownstreamPathTemplate": "/api/book?isbn={isbn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44365
+        }
+      ],
+      "UpstreamPathTemplate": "/book/{isbn}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user?username={username}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44313
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{username}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
